@@ -1,7 +1,7 @@
 import Chatbox from "@/components/chatbox/chatbox";
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
+    <main className="items-center flex flex-col justify-center p-24">
       <Chatbox />
     </main>
   )

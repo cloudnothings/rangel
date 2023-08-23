@@ -4,7 +4,7 @@ import ChatboxContainer from "./chatbox-container";
 export default function Chatbox() {
   return (
     <>
-      <Card className="max-w-2xl">
+      <Card className="z-10 max-w-2xl">
         <CardHeader>
           <CardTitle>Chatbox</CardTitle>
         </CardHeader>

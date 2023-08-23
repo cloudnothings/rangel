@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import { ThemeProvider } from './providers'
 import { Toaster as NewYorkToaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils'
+import InteractiveBackground from '@/components/interactive-bg/interactive-bg'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -23,8 +24,11 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange>
-          <div className="flex-1">
-            {children}
+          <div className="relative">
+            <InteractiveBackground />
+            <div className='absolute top-0 left-0 z-20 min-h-screen w-full'>
+              {children}
+            </div>
           </div>
         </ThemeProvider>
         <NewYorkToaster />

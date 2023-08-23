@@ -107,6 +107,9 @@ dependencies:
   '@types/node':
     specifier: 20.5.3
     version: 20.5.3
+  '@types/p5':
+    specifier: ^1.6.2
+    version: 1.6.2
   '@types/react':
     specifier: 18.2.21
     version: 18.2.21
@@ -146,6 +149,9 @@ dependencies:
   next-themes:
     specifier: ^0.2.1
     version: 0.2.1(next@13.4.19)(react-dom@18.2.0)(react@18.2.0)
+  p5:
+    specifier: ^1.7.0
+    version: 1.7.0
   postcss:
     specifier: 8.4.28
     version: 8.4.28
@@ -1928,6 +1934,10 @@ packages:
 
   /@types/node@20.5.3:
     resolution: {integrity: sha512-ITI7rbWczR8a/S6qjAW7DMqxqFMjjTo61qZVWJ1ubPvbIQsL5D/TvwjYEalM8Kthpe3hTzOGrF2TGbAu2uyqeA==}
+    dev: false
+
+  /@types/p5@1.6.2:
+    resolution: {integrity: sha512-iy1B7DBMc9e5j0DrWnIjSJh+Ro9UkKxPHspbx/GvIeGFTOIJF0H2lICnIN4go1OZEAQSHBinLd7t+oe8lrrLvA==}
     dev: false
 
   /@types/prop-types@15.7.5:
@@ -3720,6 +3730,10 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       p-limit: 3.1.0
+    dev: false
+
+  /p5@1.7.0:
+    resolution: {integrity: sha512-qrbT/44Dwm63ZtOKX/mp61pw+5yj6ijYLOmRv7p6zcfjbo83Vb0gVFEvW0kTLFu7hceWCig0HONo9F1bSlqbsQ==}
     dev: false
 
   /parent-module@1.0.1:
