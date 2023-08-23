@@ -40,7 +40,7 @@ export default async function ChatboxContainer() {
         <CardTitle className="text-center">Send an anonymous message</CardTitle>
       </CardHeader>
       <CardContent className="p-2 sm:p-6">
-        <ScrollArea className="h-[510px]">
+        <ScrollArea className="h-[100vw]">
           <MessageList chats={chats} publicKeys={publicKeys} />
         </ScrollArea>
       </CardContent>
