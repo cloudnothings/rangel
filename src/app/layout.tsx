@@ -33,7 +33,7 @@ export default function RootLayout({
           disableTransitionOnChange>
           <div className="relative">
             <DynamicInteractiveBackground />
-            <div className='absolute top-0 left-0 z-20 min-h-screen w-full'>
+            <div className='absolute top-0 left-0 min-h-screen w-full'>
               <Navbar />
               {children}
             </div>

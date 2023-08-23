@@ -9,7 +9,7 @@ import {
 
 export default function MessageItem({ message, createdAt }: { message: string, createdAt: string | Date }) {
   return (
-    <Card className="w-full">
+    <Card >
       <CardHeader className="p-2 pb-1 items-end text-xs font-mono">
         <TooltipProvider>
           <Tooltip>
