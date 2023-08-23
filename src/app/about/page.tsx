@@ -2,8 +2,8 @@ import { Card } from "@/components/ui/card";
 
 export default function AboutPage() {
   return (
-    <div className="flex flex-col items-center sm:p-4">
-      <Card className="z-10 max-w-2xl rounded-none sm:rounded-xl">
+    <div className="flex flex-col items-center pt-[57px]">
+      <Card className="max-w-2xl rounded-none sm:rounded-xl sm:mt-4">
         <div className="p-4 md:p-8">
           <h1 className="text-3xl font-bold">About the developer</h1>
           <div className="mt-4">My name is Carlos Rangel and I&apos;ve been an IT Pro for 7 years, and a software engineer for 5 years. I&apos;ve worked with a variety of technologies, including but not limited to:
