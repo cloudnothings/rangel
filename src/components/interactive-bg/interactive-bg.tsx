@@ -1,4 +1,5 @@
 "use client"
+
 import React, { useEffect, useRef } from 'react';
 import p5 from 'p5';
 interface Dot {
@@ -16,7 +17,6 @@ const InteractiveBackground: React.FC = () => {
     myP5.current = new p5(sketch, myCanvas.current!);
     return () => myP5.current?.remove();
   }, []);
-
   const sketch = (p: p5) => {
     let dots = [] as Dot[];
     const gridSize = 30;  // space between dots

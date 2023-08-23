@@ -4,8 +4,13 @@ import { Inter } from 'next/font/google'
 import { ThemeProvider } from './providers'
 import { Toaster as NewYorkToaster } from "@/components/ui/toaster"
 import { cn } from '@/lib/utils'
-import InteractiveBackground from '@/components/interactive-bg/interactive-bg'
+import Navbar from '@/components/navbar/navbar'
+import dynamic from 'next/dynamic'
 const inter = Inter({ subsets: ['latin'] })
+const DynamicInteractiveBackground = dynamic(
+  () => import('@/components/interactive-bg/interactive-bg'),
+  { ssr: false }
+);
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -25,8 +30,9 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange>
           <div className="relative">
-            <InteractiveBackground />
+            <DynamicInteractiveBackground />
             <div className='absolute top-0 left-0 z-20 min-h-screen w-full'>
+              <Navbar />
               {children}
             </div>
           </div>
