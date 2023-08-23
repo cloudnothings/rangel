@@ -19,7 +19,7 @@ export default function MessageItem({ message, createdAt }: { message: string, c
               </CardTitle>
             </TooltipTrigger>
             <TooltipContent>
-              {new Date(createdAt).toLocaleTimeString()} - {new Date(createdAt).toLocaleDateString()}
+              {new Date(createdAt).toLocaleDateString()} - {new Date(createdAt).toLocaleTimeString()}
             </TooltipContent>
           </Tooltip>
         </TooltipProvider>

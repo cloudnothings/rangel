@@ -35,12 +35,12 @@ export default async function ChatboxContainer() {
   const publicKeys = await getPublicKeys()
   const chats = await getMessages(DEFAULT_CHANNEL_ID)
   return (
-    <Card className="w-[420px] sm:w-full">
+    <Card>
       <CardHeader>
         <CardTitle className="text-center">Send an anonymous message</CardTitle>
       </CardHeader>
       <CardContent>
-        <ScrollArea className="h-[500px]">
+        <ScrollArea className="h-[490px]">
           <MessageList chats={chats} publicKeys={publicKeys} />
         </ScrollArea>
       </CardContent>
