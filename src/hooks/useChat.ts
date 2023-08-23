@@ -4,7 +4,8 @@ import type { Message } from '@prisma/client'
 import { PublicKeys } from '@/components/chatbox/chatbox-container'
 
 export type ChatBoxMessage = Message
-export const DEFAULT_CHANNEL = '1'
+const DEFAULT_CHANNEL = '1'
+const DEFAULT_EVENT = 'chat-event'
 export default function useChat(publicKeys: PublicKeys) {
   const [chats, setChats] = useState<ChatBoxMessage[]>([])
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function useChat(publicKeys: PublicKeys) {
       enabledTransports: ['ws', 'wss'],
     })
     const channel = pusher.subscribe(DEFAULT_CHANNEL)
-    channel.bind('chat-event', function (data: ChatBoxMessage) {
+    channel.bind(DEFAULT_EVENT, function (data: ChatBoxMessage) {
       setChats((prevState) => [data, ...prevState])
     })
     return () => {
