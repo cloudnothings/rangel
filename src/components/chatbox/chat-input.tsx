@@ -22,7 +22,7 @@ export function ChatInput() {
 
   return (
     <form className="w-full h-[50px]" action={() => sendMessage(message)}>
-      <Textarea className="" value={message} onChange={(e) => setMessage(e.currentTarget.value)} />
+      <Textarea value={message} onChange={(e) => setMessage(e.currentTarget.value)} />
     </form>
   )
 }

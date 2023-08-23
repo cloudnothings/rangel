@@ -12,9 +12,11 @@ const DynamicInteractiveBackground = dynamic(
   { ssr: false }
 );
 
+
 export const metadata: Metadata = {
   title: 'Carlos Rangel',
   description: 'Live portfolio.',
+  viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
 }
 
 export default function RootLayout({
@@ -24,10 +26,6 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1"
-      />
       <body className={cn('min-h-screen bg-background font-sans antialiased', inter.className)}>
         <ThemeProvider attribute="class"
           defaultTheme="system"
