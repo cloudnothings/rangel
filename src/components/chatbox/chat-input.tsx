@@ -21,7 +21,7 @@ export function ChatInput() {
   }, [message])
 
   return (
-    <form className="w-full" action={() => sendMessage(message)}>
+    <form className="w-full h-[50px]" action={() => sendMessage(message)}>
       <Textarea value={message} onChange={(e) => setMessage(e.currentTarget.value)} />
     </form>
   )

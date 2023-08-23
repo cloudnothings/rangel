@@ -119,7 +119,7 @@ const InteractiveBackground: React.FC = () => {
 
   };
 
-  return <div ref={myCanvas}></div>;
+  return <div className='hidden sm:block' ref={myCanvas}></div>;
 };
 
 export default InteractiveBackground;

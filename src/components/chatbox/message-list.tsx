@@ -9,7 +9,7 @@ export default function MessageList({ chats, publicKeys }: { chats: Message[], p
   const { chats: newChats } = useChat(publicKeys)
   chats = [...newChats, ...chats]
   return (
-    <div className="flex flex-col gap-2">
+    <div className="flex flex-col gap-2 max-w-[95vw] sm:max-w-2xl">
       {chats.map((chat, index) => (
         <MessageItem key={index} message={chat.content} createdAt={chat.createdAt} />
       ))}
