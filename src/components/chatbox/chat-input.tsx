@@ -11,6 +11,7 @@ export function ChatInput() {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Enter") {
         e.preventDefault()
+        if (message.trim() === "") return
         sendMessage(message)
         setMessage("")
       }
