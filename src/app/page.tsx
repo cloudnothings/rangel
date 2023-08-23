@@ -1,4 +1,4 @@
-import ChatboxKeys from "@/components/chatbox/chatbox-keys";
+import ChatboxContainer from "@/components/chatbox/chatbox-container";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function Home() {
@@ -10,7 +10,7 @@ export default function Home() {
           <CardTitle>Chatbox</CardTitle>
         </CardHeader>
         <CardContent>
-          <ChatboxKeys />
+          <ChatboxContainer />
         </CardContent>
       </Card>
     </main>

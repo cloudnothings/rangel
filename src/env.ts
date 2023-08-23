@@ -8,7 +8,6 @@ export const env = createEnv({
    */
   clientPrefix: 'PUBLIC_',
   server: {
-    NODE_ENV: z.enum(['development', 'test', 'production']),
     DATABASE_URL: z.string().url(),
     SOKETI_HOST: z.string(),
     SOKETI_PORT: z.string(),
