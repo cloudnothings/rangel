@@ -12,14 +12,14 @@ export function NavLinks() {
   const pathname = usePathname()
 
   return (
-    <div className="flex">
-      <Link href="/" className="flex items-center space-x-2 md:mr-6">
+    <div className="flex gap-4">
+      <Link href="/" className="flex space-x-2 md:mr-6">
         <Icons.logo className="w-6 h-6" />
-        <span className="hidden font-bold sm:inline-block">
+        <span className="font-bold">
           {siteConfig.name}
         </span>
       </Link>
-      <nav className="items-center hidden space-x-6 text-sm font-medium md:flex">
+      <nav className="items-end -translate-y-[1px] space-x-6 text-sm font-bold flex">
         <Link
           href="/about"
           className={cn(

@@ -88,8 +88,35 @@ const InteractiveBackground: React.FC = () => {
     };
 
     p.windowResized = () => {
-      p.resizeCanvas(p.windowWidth, p.windowHeight);
+      p.resizeCanvas(p.windowWidth, p.windowHeight);  // Adjust the canvas size
+      dots.length = 0;  // Clear the current array of dots
+
+      let offset = false;
+
+      for (let y = gridSize; y < p.height; y += gridSize) {
+        for (let x = gridSize / 2; x < p.width - gridSize / 2; x += gridSize) {
+          if (offset) {
+            if (x + gridSize / 2 < p.width - gridSize / 2) {
+              dots.push({
+                ix: x + gridSize / 2,
+                iy: y,
+                x: x + gridSize / 2,
+                y: y,
+              });
+            }
+          } else {
+            dots.push({
+              ix: x,
+              iy: y,
+              x: x,
+              y: y,
+            });
+          }
+        }
+        offset = !offset;
+      }
     };
+
   };
 
   return <div ref={myCanvas}></div>;
