@@ -7,7 +7,13 @@ import { usePathname } from "next/navigation"
 import { siteConfig } from "@/config/site"
 import { cn } from "@/lib/utils"
 import { Icons } from "@/components/ui/icons"
-
+const LINKS = [
+  { href: "/about", name: "About" },
+  { href: "/projects", name: "Projects" },
+  { href: "/benchmarks", name: "Benchmarks" },
+  { href: "/contact", name: "Contact" },
+  // { href: "/blog", name: "Blog" },
+]
 export function NavLinks() {
   const pathname = usePathname()
 
@@ -20,24 +26,18 @@ export function NavLinks() {
         </span>
       </Link>
       <nav className="items-end -translate-y-[1px] space-x-6 text-sm font-bold flex">
-        <Link
-          href="/about"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname === "/about" ? "text-foreground" : "text-foreground/60"
-          )}
-        >
-          About
-        </Link>
-        <Link
-          href="/projects"
-          className={cn(
-            "transition-colors hover:text-foreground/80",
-            pathname === "/projects" ? "text-foreground" : "text-foreground/60"
-          )}
-        >
-          Projects
-        </Link>
+        {LINKS.map(({ href, name }) => (
+          <Link
+            key={name}
+            href={href}
+            className={cn(
+              "transition-colors hover:text-foreground/80",
+              pathname === href ? "text-foreground" : "text-foreground/60"
+            )}
+          >
+            {name}
+          </Link>
+        ))}
       </nav>
     </div>
   )
