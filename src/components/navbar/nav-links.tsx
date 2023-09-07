@@ -29,6 +29,15 @@ export function NavLinks() {
         >
           About
         </Link>
+        <Link
+          href="/projects"
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname === "/projects" ? "text-foreground" : "text-foreground/60"
+          )}
+        >
+          Projects
+        </Link>
       </nav>
     </div>
   )
