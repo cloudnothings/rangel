@@ -25,7 +25,19 @@ export function NavLinks() {
           {siteConfig.name}
         </span>
       </Link>
-      <nav className="items-end -translate-y-[1px] space-x-6 text-sm font-bold flex">
+      <nav className="items-end -translate-y-[1px] sm:hidden space-x-6 text-sm font-bold flex">
+        <Link
+          key={LINKS[0].name}
+          href={LINKS[0].href}
+          className={cn(
+            "transition-colors hover:text-foreground/80",
+            pathname === LINKS[0].href ? "text-foreground" : "text-foreground/60"
+          )}
+        >
+          {LINKS[0].name}
+        </Link>
+      </nav>
+      <nav className="items-end -translate-y-[1px] hidden sm:flex space-x-6 text-sm font-bold">
         {LINKS.map(({ href, name }) => (
           <Link
             key={name}
